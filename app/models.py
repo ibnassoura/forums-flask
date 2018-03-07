@@ -1,23 +1,22 @@
-import stores
-import datetime
-class Member:
-    def __init__(self,name,age):
-        self.id=0
-        self.name=name
-        self.age=age
-        self.posts=[]
+class Member():
+
+    def __init__(self, name, age):
+        self.id = 0
+        self.name = name
+        self.age = age
+        self.posts = []
 
     def __str__(self):
-        return "Name: "+str(self.name) +", Age: "+str(self.age)
+        return f"Name: {self.name}, Age: {self.age}"
+
 
 class Post():
-    def __init__(self,title,content,member_id=0):
-        self.id=0
-        self.title=title
-        self.content=content
-        self.member_id=member_id
-        self.date=datetime.datetime.now()
+
+    def __init__(self, title, content, member_id=0):
+        self.id = 0
+        self.title = title
+        self.content = content
+        self.member_id = member_id
 
     def __str__(self):
-        return "Title: "+str(self.title) + ", Content: "+str(self.content)+ "Time: "+str(self.date)
-        
+        return f"Title: {self.title}, Content: {self.content}"
