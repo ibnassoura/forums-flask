@@ -25,4 +25,4 @@ def topic_delete(id):
 
 @app.route("/topic/show/<int:id>")
 def topic_show(id):
-    return render_template("topic_show.html", posts = post_store.get_by_id(id))
+    return render_template("topic_show.html", post = post_store.get_by_id(id))
